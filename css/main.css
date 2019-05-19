@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f5f5;
+  font-size: 0.8em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.line {
+  background-color: #363636;
+  height: 10px;
+}
+
+.main-content {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.search-form {
+  display: block;
+  width: 100%;
+  text-align: right;
+  margin: 20px 0;
+}
+
+.search-form input {
+  padding: 6px;
+  width: 85%;
+  min-width: 120px;
+  border: 1px solid #ccc;
+}
+
+.search-form button {
+  border-radius: 0;
+  border: 1px solid #ccc;
+  margin-left: -5px;
+  padding: 6px 10px;
+}
+
+
+.logo img {
+  width: 100%;
+  height: auto;
+  margin-top: -35px;
+}
+
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: #696969;
+  text-decoration: none !important;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul li a {
+  display: block;
+  border-top: 1px solid #dcdcdc;
+  min-height: 30px;
+  padding: 7px 0;
+  color: #696969;
+  font-size: 8pt;
+}
+
+nav ul li ul li {
+  display: none;
+}
+
+nav ul li:hover {
+  background: #ccc;
+}
+
+nav ul li:hover a {
+  color: #696969;
+}
+
+
+nav ul li:hover ul li {
+  background: #f5f5f5 !important;
+  display: block;
+}
+
+nav ul li:hover ul li a {
+  padding-left: 30px;
+  color: #696969;
+}
+
+nav ul li ul li:hover {
+  background: #ccc !important;
+}
+
+.content {
+  width: 100%;
+}
+
+.portfolio {
+  margin-bottom: 20px;
+}
+
+.portfolio a {
+  color: #000;
+  font-size: 1.2em;
+  padding-right: 2%;
+}
+
+.portfolio-icons {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+footer {
+  background: #363636;
+  min-height: 120px;
+  color: #c9c9c9;
+}
+
+footer .social {
+  text-align: right;
+}
+
+.social, .copyright {
+  padding-top: 30px;
+}
