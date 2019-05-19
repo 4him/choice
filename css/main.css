@@ -35,11 +35,10 @@ body {
 }
 
 .search-form button {
-  width: 15%;
   border-radius: 0;
   border: 1px solid #ccc;
   margin-left: -5px;
-  padding: 0.45em 1%;
+  padding: 6px 10px;
 }
 
 
@@ -73,7 +72,7 @@ nav ul li a {
 }
 
 nav ul li ul li {
-  display: none;
+/*  display: none;*/
 }
 
 nav ul li:hover {
@@ -90,7 +89,7 @@ nav ul li:hover ul li {
   display: block;
 }
 
-nav ul li:hover ul li a {
+nav ul li ul li a {
   padding-left: 30px;
   color: #696969;
 }
@@ -100,7 +99,7 @@ nav ul li ul li:hover {
 }
 
 .selected {
-    background: #ccc !important;
+  background: red !important;
 }
 
 .content {
