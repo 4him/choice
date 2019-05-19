@@ -16,12 +16,12 @@ body {
 }
 
 .main-content {
-  width: 75%;
+  width: 70%;
   margin: 0 auto;
 }
 
 .search-form {
-  display: block;
+/*  display: block;*/
   width: 100%;
   text-align: right;
   margin: 20px 0;
@@ -35,10 +35,11 @@ body {
 }
 
 .search-form button {
+  width: 15%;
   border-radius: 0;
   border: 1px solid #ccc;
   margin-left: -5px;
-  padding: 6px 10px;
+  padding: 0.45em 1%;
 }
 
 
@@ -68,7 +69,7 @@ nav ul li a {
   min-height: 30px;
   padding: 7px 0;
   color: #696969;
-  font-size: 8pt;
+  font-size: 9pt;
 }
 
 nav ul li ul li {
@@ -96,6 +97,10 @@ nav ul li:hover ul li a {
 
 nav ul li ul li:hover {
   background: #ccc !important;
+}
+
+.selected {
+    background: #ccc !important;
 }
 
 .content {
