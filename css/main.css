@@ -98,8 +98,8 @@ nav ul li ul li:hover {
   background: #ccc !important;
 }
 
-.selected {
-  background: red !important;
+.selected>a {
+  background: #ccc !important;
 }
 
 .content {

@@ -58,11 +58,11 @@
        // start subjects loop
       $subjects_result = get_all_subjects();
        // print subjects menu
-       while ($subject = $subjects_result->fetch()) {
-        
+			 $all_subjects = $subjects_result->fetchAll();
+			 foreach($all_subjects as $subject){
        echo '<li ';
         if($sel_subject == $subject['id']){
-          echo ' class="selected" ';
+          echo ' class=" selected " ';
         }
        echo '><a href="index.php?subj='
         .urlencode($subject['id']).
