@@ -21,7 +21,7 @@ body {
 }
 
 .search-form {
-/*  display: block;*/
+  display: block;
   width: 100%;
   text-align: right;
   margin: 20px 0;
@@ -29,7 +29,7 @@ body {
 
 .search-form input {
   padding: 6px;
-  width: 85%;
+  width: 80%;
   min-width: 120px;
   border: 1px solid #ccc;
 }
@@ -44,6 +44,7 @@ body {
 
 .logo img {
   width: 100%;
+    max-width: 250px !important;
   height: auto;
   margin-top: -35px;
 }
@@ -75,8 +76,8 @@ nav ul li ul li {
 /*  display: none;*/
 }
 
-nav ul li:hover {
-  background: #ccc;
+nav>ul>li>a:hover {
+  background: #ccc !important;
 }
 
 nav ul li:hover a {
@@ -84,7 +85,7 @@ nav ul li:hover a {
 }
 
 
-nav ul li:hover ul li {
+nav ul li:hover, nav ul li:hover ul li {
   background: #f5f5f5 !important;
   display: block;
 }
@@ -100,6 +101,7 @@ nav ul li ul li:hover {
 
 .selected>a {
   background: #ccc !important;
+	display: block;
 }
 
 .content {

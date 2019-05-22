@@ -10,11 +10,11 @@
  <link rel="stylesheet" type="text/css" href="bootstrap">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
- <link rel="stylesheet" type="text/css" href="/css/main.css">
+ <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
- <section class="line container-fluid"></sec tion>
+ <section class="line container-fluid"></section>
  <section class="main-content container">
   <section class="row">
    <section class="col-lg-4 col-md-12 col-sm-12 offset-lg-8">
