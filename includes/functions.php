@@ -19,11 +19,11 @@ function get_all_pages($subject_id){
   $pages_query = 
    "SELECT * from pages 
    where subject_id = {$subject_id}";
- 
   $all_pages = $connection->prepare($pages_query);
   $all_pages->execute();
   confirm_query($all_pages);
  return $all_pages;
 }
+
 
 ?>
