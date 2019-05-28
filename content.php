@@ -4,8 +4,12 @@
   
    <section class="slider col-lg-9">
     <?php 
-    $subject = get_subject_by_id($sel_subject);
-    echo $subject['name'];
+    if(is_null($sel_subject)){
+     echo "Эта страница не найденна - пожалуйста выберите другую страницу.";
+    }else{
+     $subject = get_subject_by_id($sel_subject);
+     echo $subject['name'];
+    }
     ?>
    </section>
   </section>

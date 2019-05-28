@@ -1,5 +1,5 @@
 <?php 
-function confirm_query ($query_result){
+function confirm_query($query_result){
   if(!$query_result){
    die("There is an error during query.");
   }
