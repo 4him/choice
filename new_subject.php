@@ -30,13 +30,13 @@
       </div>
     </fieldset>
     <div class="form-group row">
-     <?php 
-     $count_subjects = count(get_all_subjects()->fetchAll());
-         echo($count_subjects);
-     ?>
       <label for="" class="col-sm-2 col-form-label text-right">Позиция</label>
       <div class="col-sm-10">
         <select class="form-control form-control-sm" name="position">
+         <?php 
+          $count_subjects = count(get_all_subjects()->fetchAll());
+              ($count_subjects);
+         ?>
           <option selected>Укажите позицию</option>
           <option value="1">1</option>
           <option value="2">2</option>
