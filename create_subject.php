@@ -9,22 +9,13 @@ $content = htmlspecialchars($_POST['description']);
 
 $error = array();
 
-if(!isset($name) || empty($name) ){
- $error[] = "Check your form - insert - name";
-}
+$field_names = ['Название'=>$name, 'Видимый'=>$visibility, 'Позиция'=>$position, 'Содержание'=>$content];
 
-if(!isset($visibility)){
- $error[] = "Check your form - insert - visibility";
+foreach($field_names as $key => $field){
+  if(!isset($field) || empty($field) ){
+  $error[] = "Check your form - insert - ".$key;
+ }
 }
-
-if(!isset($position) || empty($position)){
- $error[] = "Check your form - insert - position";
-}
-
-if(!isset($content) || empty($content)){
- $error[] = "Check your form - insert - content";
-}
-
 
 if(empty($error)){
 $insert_query = "INSERT INTO subjects 
