@@ -62,7 +62,7 @@ function navigation($sel_subject, $sel_page){
     if($sel_subject == $subject['id']){
       echo ' class=" selected " ';
     }
-   echo '><a href="content.php?subj='
+   echo '><a href="edit_subject.php?subj='
     .urlencode($subject['id']).
     '">'.$subject['name'].'</a>';
    echo '<ul>';

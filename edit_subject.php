@@ -1,5 +1,44 @@
 <?php include("includes/connection.php");?>
 <?php include("includes/functions.php");?>
+<?php
+if(isset($_POST['submit_btn'])){
+   $id = htmlspecialchars($_GET['subj']);
+   $name = htmlspecialchars($_POST['name']);
+   $visibility = htmlspecialchars($_POST['visibility']);
+   $position = htmlspecialchars($_POST['position']);
+   $content = htmlspecialchars($_POST['description']);
+
+   $errors = array();
+
+   $field_names = ['Название'=>$name, 'Видимый'=>$visibility, 'Позиция'=>$position, 'Содержание'=>$content];
+
+   foreach($field_names as $key => $field){
+     if(!isset($field) || (empty($field) && $key !== 'Видимый') ){
+     $errors[] = $key;
+    }
+   }
+
+   if(empty($errors)){
+   $insert_query = "UPDATE subjects SET
+                   name = '{$name}',
+                   position = $position,
+                   visible = $visibility,
+                   content = '{$content}'
+                   WHERE id = $id
+                   ";
+   $new_subject = $connection->prepare($insert_query);
+   $new_subject->execute();
+    $message = "Вы успешно обновили раздел";
+   }else{
+    $message = "Проверьте поля формы на заполнение: <br/>";
+    $output = '';
+    foreach($errors as $single){
+     $output .= " - $single <br/>";
+    }
+   }
+   $message .= $output;
+}
+?>
 <?php include("header.php"); ?>
 <?php 
   $subject = get_subject_by_id($sel_subject);
@@ -7,7 +46,12 @@
   
    <section class="slider col-lg-9">
    <h3 class="offset-sm-2">Редактирование раздела: </h3>
-   <form method="post" action="create_subject.php">
+   <?php
+    if(!empty($message)){
+     echo $message;
+    }
+    ?>
+   <form method="post" action="edit_subject.php?subj=<?php echo $subject['id']; ?>">
     <div class="form-group row">
       <label for="title" class="col-sm-2 col-form-label text-right">Название</label>
       <div class="col-sm-10">
@@ -67,7 +111,7 @@
     <div class="form-group row">
       <div class="col-sm-2"></div>
       <div class="col-sm-10"> 
-        <button type="submit" class="btn btn-success">Сохранить изменения</button>
+        <button type="submit" class="btn btn-success" name="submit_btn" value="sub">Сохранить изменения</button>
       </div>
     </div>
   </form>
