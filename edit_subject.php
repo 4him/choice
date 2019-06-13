@@ -3,6 +3,7 @@
 <?php
 if(isset($_POST['submit_btn'])){
    $id = htmlspecialchars($_GET['subj']);
+
    $name = htmlspecialchars($_POST['name']);
    $visibility = htmlspecialchars($_POST['visibility']);
    $position = htmlspecialchars($_POST['position']);
@@ -23,7 +24,7 @@ if(isset($_POST['submit_btn'])){
                    name = '{$name}',
                    position = $position,
                    visible = $visibility,
-                   content = '{$content}'
+                   content = '{$content}' 
                    WHERE id = $id
                    ";
    $new_subject = $connection->prepare($insert_query);
@@ -111,7 +112,9 @@ if(isset($_POST['submit_btn'])){
     <div class="form-group row">
       <div class="col-sm-2"></div>
       <div class="col-sm-10"> 
-        <button type="submit" class="btn btn-success" name="submit_btn" value="sub">Сохранить изменения</button>
+        <button type="submit" class="btn btn-success" name="submit_btn" value="sub">Сохранить</button>
+        <a href="delete_subject.php?subj=<?php echo $subject['id']; ?>" class="btn btn-danger" onclick="return confirm('Вы уверены, что желаете удалить данный раздел?');">Удалить</a>
+         <a href="new_page.php?subj=<?php echo $subject['id']; ?>" class="btn btn-success offset-sm-3">Добавить статью</a>
       </div>
     </div>
   </form>
